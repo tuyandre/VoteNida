@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    tools:context=".ChooseActivity">
+
+
+    <TextView
+        android:id="@+id/tvi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to NIDA Registration API"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle" />
+
+    <LinearLayout
+        android:id="@+id/layi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvi"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnchooseprovince"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybutton"
+            android:text="Choose Province"
+            android:textColor="#fff" />
+
+        <ProgressBar
+            android:id="@+id/pbprovince"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewprovince"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvshowprovince"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layi"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnchoosedistrict"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybutton"
+            android:text="Choose District"
+            android:textColor="#fff" />
+
+        <ProgressBar
+            android:id="@+id/pbpdistict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewdistrict"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvshowdistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btncontinuechoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/mybutton"
+        android:text="Continue"
+        android:textColor="#fff"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registration Nida API"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+            android:textColor="#fff" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical"
+        tools:context=".RegisterActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lay2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etnames"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/textview_border"
+                    android:fontFamily="sans-serif"
+                    android:hint="Names"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="60dp"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="285dp" />
+
+
+                <EditText
+                    android:id="@+id/etemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/textview_border"
+                    android:fontFamily="sans-serif"
+                    android:hint="NID"
+                    android:inputType="phone"
+                    android:paddingLeft="60dp"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="285dp" />
+
+
+                <EditText
+                    android:id="@+id/etphoner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/textview_border"
+                    android:fontFamily="sans-serif"
+                    android:hint="phone"
+                    android:inputType="phone"
+                    android:paddingLeft="60dp"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="285dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender: " />
+
+                    <CheckBox
+                        android:id="@+id/cxmale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male" />
+
+                    <CheckBox
+                        android:id="@+id/cxfemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Choose Province"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle" />
+
+                    <Spinner
+                        android:id="@+id/spinner_province"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Choose District"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle" />
+
+                    <Spinner
+                        android:id="@+id/spinner_district"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/btndob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date of birth" />
+
+                    <TextView
+                        android:id="@+id/tvdob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp" />
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btncontinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mybutton"
+                    android:fontFamily="sans-serif"
+                    android:padding="10dp"
+                    android:text="continue"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
